@@ -10,13 +10,13 @@ const App = () => {
     <div>
       <Navbar/>
 
-      <main style={{ padding: 12 }}>
+   
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </main>
+
     </div>
   )
 }
