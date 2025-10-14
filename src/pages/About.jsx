@@ -1,10 +1,10 @@
+import About1 from '@/components/minipages/About1'
 import React from 'react'
 
 const About = () => {
   return (
     <div>
-      <h1>About</h1>
-      <p>This is the about page.</p>
+     <About1 />
     </div>
   )
 }
