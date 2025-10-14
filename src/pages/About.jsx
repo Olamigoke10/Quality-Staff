@@ -1,9 +1,11 @@
-import About1 from '@/components/About1'
 import React from 'react'
 
 const About = () => {
   return (
-    <About1 />
+    <div>
+      <h1>About</h1>
+      <p>This is the about page.</p>
+    </div>
   )
 }
 
