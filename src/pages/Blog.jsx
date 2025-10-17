@@ -13,7 +13,7 @@ const Blog = () => {
       content: {
         sections: [
           {
-            heading: "The Village's Secret",
+            heading: "The Village",
             text: "Deep within the mist-covered mountains of Japan, there lies a small, secluded village known as <i>Yamadori</i>. For centuries, the villagers have lived in harmony with nature, but they also harbor a dark secret—an ancient pact with the spirits of the forest, the <i>yokai</i>."
           },
           {
