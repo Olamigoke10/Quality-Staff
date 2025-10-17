@@ -16,24 +16,22 @@ const Home = () => {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium w-fit">
                 <span>🏆</span>
-                Healthcare Staffing Excellence
+                Leading Staffing Excellence
               </div>
 
               {/* Main Heading */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                Better Staff,
+                Leading Employment Agency,
                 <span className="block text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text dark:from-blue-400 dark:to-indigo-400">
-                  Better Care
+                Expert Staffing and Recruitment Solutions
                 </span>
-                Delivered.
+                Connecting care professionals and employers across Wales.
               </h1>
 
               {/* Description */}
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
-                We connect healthcare facilities with pre-vetted, qualified
-                professionals who are committed to delivering exceptional
-                patient care. Reduce staffing gaps while maintaining the highest
-                quality standards.
+                Find top talent and reliable staffing services in Wales with Quality Staffing Care. 
+                We specialise in recruitment, employment, and workforce solutions tailored to your business needs.
               </p>
 
               {/* Features List */}
