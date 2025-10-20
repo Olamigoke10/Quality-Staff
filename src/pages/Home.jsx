@@ -200,7 +200,7 @@ const Home = () => {
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
                         <h4 className="font-semibold text-gray-900 dark:text-white">
-                          Emily Rodriguez
+                          Emily Stake
                         </h4>
                         <span className="text-xs bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 px-2 py-1 rounded-full">
                           Available
