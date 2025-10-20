@@ -21,11 +21,11 @@ const Home = () => {
 
               {/* Main Heading */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                Employment Agency
+                Connecting
                 <span className="block text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text dark:from-blue-400 dark:to-indigo-400">
-                Expert Recruitment Solutions
+                Care
                 </span>
-                Connecting care professionals and employers across Wales.
+                Excellence
               </h1>
 
               {/* Description */}
