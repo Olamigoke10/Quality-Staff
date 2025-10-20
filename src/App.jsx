@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
 import Navbar from './components/Navbar'
-import Footer from './components/footer'
+import Footer from './components/Footer'
 import Blog from './pages/Blog'
 
 const App = () => {
