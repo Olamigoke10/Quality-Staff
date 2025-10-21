@@ -25,7 +25,7 @@ const Home = () => {
                 <span className="block text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text dark:from-blue-400 dark:to-indigo-400">
                 Care
                 </span>
-                Excellence
+                Excellence Now
               </h1>
 
               {/* Description */}
