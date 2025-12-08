@@ -16,20 +16,24 @@ const Home = () => {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium w-fit">
                 <span>🏆</span>
-                Leading Staffing Excellence
+                Reliable. Compassionate. 24/7 Care Staffing Across England & Wales.
               </div>
 
               {/* Main Heading */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                Connecting
+               Your Trusted
                 <span className="block text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text dark:from-blue-400 dark:to-indigo-400">
-                Care
+                Staffing
                 </span>
-                Excellence
+                Partner
               </h1>
 
               {/* Description */}
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
+                Quality Staffing Care Agency provides highly trained, reliable, and compassionate care professionals to supported living homes, residential care homes, and nursing services across Wales and England.
+                Whether you need emergency last-minute cover, regular shift support, or long-term staffing, we ensure your residents always receive the highest standard of care.
+                We operate 24/7, making us one of Wales’ most dependable and responsive care staffing agencies.
+                
                 Find top talent and reliable staffing services in Wales with Quality Staffing Care. 
                 We specialise in recruitment, employment, and workforce solutions tailored to your business needs.
               </p>
@@ -73,7 +77,7 @@ const Home = () => {
                     </svg>
                   </div>
                   <span className="text-gray-700 dark:text-gray-300">
-                    Certified Professionals
+                    Qualified Professionals
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
