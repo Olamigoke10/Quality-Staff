@@ -51,33 +51,33 @@ const Footer = () => {
     </div>
 
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa cum
-      itaque neque.
+      Professional workforce solutions for businesses across multiple sectors.
+      We deliver reliable, compliant, fully vetted staff for temporary, contract, and permanent roles..
     </p>
 
     <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
       <li>
-        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> About </a>
+        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Home </a>
       </li>
 
       <li>
-        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Careers </a>
+        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Work with Us </a>
       </li>
 
       <li>
-        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> History </a>
+        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Employer Services </a>
       </li>
 
       <li>
-        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Services </a>
+        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Job Opportunities </a>
       </li>
 
       <li>
-        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Projects </a>
+        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Contact </a>
       </li>
 
       <li>
-        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> Blog </a>
+        <a className="text-gray-700 transition hover:text-gray-700/75" href="#"> About Us </a>
       </li>
     </ul>
 

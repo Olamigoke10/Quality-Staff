@@ -16,7 +16,7 @@ const Home = () => {
               {/* Badge */}
               <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium w-fit">
                 <span>🏆</span>
-                Reliable. Compassionate. 24/7 Care Staffing Across England & Wales.
+                Reliable. Compassionate. 24/7 Care Staffing Across UK.
               </div>
 
               {/* Main Heading */}
