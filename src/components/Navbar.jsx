@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import QSCA from './assets/QSCA.svg'
+import QSCA from '../assets/QSCA.svg'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
