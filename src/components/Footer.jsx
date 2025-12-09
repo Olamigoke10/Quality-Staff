@@ -1,5 +1,5 @@
 import React from 'react'
-import QSC from '../assets/QSC.svg'
+import QSCWhiteBG from '../assets/QSCWhiteBG.svg'
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-gray-900">
   <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 shadow-md">
     <div className="flex justify-center text-teal-600">
-       <img src={QSC} className="h-8" alt="QSC Logo" />
+       <img src={QSCWhiteBG} className="h-8" alt="QSC Logo" />
                  
     </div>
 
