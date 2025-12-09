@@ -7,10 +7,8 @@ const Footer = () => {
     <footer className="bg-gray-900">
   <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 shadow-md">
     <div className="flex justify-center text-teal-600">
-      <NavLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse" onClick={closeMenu}>
-                  <img src={QSC} className="h-8" alt="QSC Logo" />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Quality Staff Care</span>
-                </NavLink>
+       <img src={QSC} className="h-8" alt="QSC Logo" />
+                 
     </div>
 
     <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
