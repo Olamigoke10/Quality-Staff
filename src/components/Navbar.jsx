@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import QSCA from '../assets/QSCA.svg'
+import QSC from '../assets/QSC.svg'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -34,7 +34,7 @@ const Navbar = () => {
       <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 shadow-md sticky top-0 z-50">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse" onClick={closeMenu}>
-            <img src={QSCA} className="h-8" alt="QSCA Logo" />
+            <img src={QSC} className="h-8" alt="QSC Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Quality Staff Care</span>
           </NavLink>
           
