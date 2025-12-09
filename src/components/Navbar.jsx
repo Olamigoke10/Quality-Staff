@@ -23,7 +23,7 @@ const Navbar = () => {
 
   const navItems = [
     { path: '/', label: 'Home', end: true },
-    { path: '/about', label: 'About' },
+    { path: '/about', label: 'About Us' },
     { path: '/blog', label: 'Blog' },
     { path: '/services', label: 'Services' },
     { path: '/contact', label: 'Contact' }
@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <NavLink to="/" className="flex items-center space-x-3 rtl:space-x-reverse" onClick={closeMenu}>
             <img src={QSC} className="h-16" alt="QSC Logo" />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap text-blue-900 dark:text-white">Quality Staff Care</span>
+            <span className="self-center text-2xl font-semibold whitespace-nowrap text-blue-900 dark:text-white">Quality Staffing Care</span>
           </NavLink>
           
           {/* Mobile menu button */}
