@@ -211,7 +211,7 @@ const Home = () => {
                         </span>
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Highly skilled Registered Nurse with extensive experience in acute care, patient monitoring, and evidence-based clinical support. 
+                        Highly skilled Registered Nurses with extensive experience in acute care, patient monitoring, and evidence-based clinical support. 
                         Reliable, compassionate, and trained to adapt quickly to fast-paced healthcare environments.
                       </p>
                       <div className="flex items-center gap-4 mt-1">
@@ -240,7 +240,7 @@ const Home = () => {
                         </span>
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Board-certified Emergency Medicine doctor with advanced trauma response training. 
+                        Board-certified Emergency Medicine doctors with advanced trauma response training. 
                         Experienced in high-acuity situations, rapid diagnostics, and providing life-saving interventions under pressure.
                       </p>
                       <div className="flex items-center gap-4 mt-1">
@@ -269,7 +269,7 @@ const Home = () => {
                         </span>
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Compassionate LPN skilled in long-term care, rehabilitation support, and hands-on patient assistance. 
+                        Compassionate LPNs skilled in long-term care, rehabilitation support, and hands-on patient assistance. 
                         Strong communication skills and a proven track record of improving patient comfort and continuity of care.
                       </p>
                       <div className="flex items-center gap-4 mt-1">

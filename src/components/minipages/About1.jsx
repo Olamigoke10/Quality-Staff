@@ -8,14 +8,17 @@ const About1 = () => {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center space-y-6 max-w-4xl mx-auto'>
             <p className='text-sm font-semibold tracking-wide uppercase text-blue-400'>
-              About Us
+              Quality Staffing Care
             </p>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight'>
-              WE'RE QUALITY STAFFING CARE,{' '}
-              <span className='text-blue-400'>COMMITTED TO EXCELLENCE</span> AND YOUR SUCCESS EVERY STEP OF THE WAY
-            </h1>
+            <h3 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight'>
+              Delivering Compassionate,{' '}
+              <span className='text-blue-400'>Reliable</span> & Skilled Care Professionals Across the UK
+            </h3>
             <p className='text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto'>
-              Our staff are highly skilled professionals dedicated to ensuring top-quality results. 
+              
+              Quality Staffing Care is a leading staffing provider based in Wales, specialising in supplying high-quality staff that includes support worksers, Care Assistants, and Senior Carers to supported living homes, residential care homes, and nursing services.
+              We were founded on a simple mission:
+              To improve care quality by connecting dedicated care staff with care providers who need them—quickly, professionally, and ethicallyOur staff are highly skilled professionals dedicated to ensuring top-quality results. 
               We strive to deliver exceptional service and support for all your staffing needs.
             </p>
             <div className='pt-4'>
@@ -23,7 +26,7 @@ const About1 = () => {
                 href="#contact" 
                 className='inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 shadow-lg'
               >
-                Looking for Help?
+                Work with Us
               </a>
             </div>
           </div>
@@ -46,9 +49,8 @@ const About1 = () => {
             <div className='lg:col-span-2'>
               <div className='space-y-4 text-gray-700'>
                 <p className='text-lg leading-relaxed'>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, animi, 
-                  similique quaerat dicta id eos velit rem nisi ea totam eius itaque aliquam. 
-                  Explicabo, dolores neque ratione voluptatem recusandae qui?
+                  We understand the pressures care providers face: staff shortages, demanding workloads, strict compliance, and ensuring residents receive continuous, person-centred support.
+                  QSC was created to be part of the solution—offering 24/7 staffing support, highly trained professionals, and a partnership approach built on trust.
                 </p>
                 <p className='text-lg leading-relaxed'>
                   Our journey began with a simple mission: to provide exceptional staffing solutions 
