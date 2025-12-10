@@ -30,9 +30,9 @@ const Home = () => {
 
               {/* Description */}
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
-                Quality Staffing Care Agency provides highly trained, reliable, and compassionate care professionals to supported living homes, residential care homes, and nursing services across Wales and England.
+                Quality Staffing Care provides highly trained, reliable, and compassionate care professionals to supported living homes, residential care homes, and nursing services across England and Wales.
                 Whether you need emergency last-minute cover, regular shift support, or long-term staffing, we ensure your residents always receive the highest standard of care.
-                We operate 24/7, making us one of Wales’ most dependable and responsive care staffing agencies.
+                We operate 24/7, making us one of UK’ most dependable and responsive care staffing agencies.
                 
                 Find top talent and reliable staffing services in Wales with Quality Staffing Care. 
                 We specialise in recruitment, employment, and workforce solutions tailored to your business needs.
