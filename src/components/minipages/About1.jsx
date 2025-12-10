@@ -10,10 +10,10 @@ const About1 = () => {
             <p className='text-sm font-semibold tracking-wide uppercase text-blue-400'>
               Quality Staffing Care
             </p>
-            <h3 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight'>
+            <h5 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight'>
               Delivering Compassionate,{' '}
               <span className='text-blue-400'>Reliable</span> & Skilled Care Professionals Across the UK
-            </h3>
+            </h5>
             <p className='text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto'>
               
               Quality Staffing Care is a leading staffing provider based in Wales, specialising in supplying high-quality staff that includes support worksers, Care Assistants, and Senior Carers to supported living homes, residential care homes, and nursing services.
@@ -50,7 +50,7 @@ const About1 = () => {
               <div className='space-y-4 text-gray-700'>
                 <p className='text-lg leading-relaxed'>
                   We understand the pressures care providers face: staff shortages, demanding workloads, strict compliance, and ensuring residents receive continuous, person-centred support.
-                  QSC was created to be part of the solution—offering 24/7 staffing support, highly trained professionals, and a partnership approach built on trust.
+                  QSC was created to be part of the solution offering 24/7 staffing support, highly trained professionals, and a partnership approach built on trust.
                 </p>
                 <p className='text-lg leading-relaxed'>
                   Our journey began with a simple mission: to provide exceptional staffing solutions 
