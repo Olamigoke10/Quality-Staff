@@ -170,7 +170,7 @@ const Home = () => {
                 {/* Header with Search */}
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                    Qualified Healthcare Professionals Ready for Your Facility
+                    Qualified Healthcare Professionals
                   </h3>
                   <div className="relative">
                     <input
@@ -292,7 +292,7 @@ const Home = () => {
                         150+
                       </div>
                       <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Available
+                        Active Healthcare Professionals
                       </div>
                     </div>
                     <div>
@@ -300,7 +300,7 @@ const Home = () => {
                         24h
                       </div>
                       <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Avg. Response
+                        Average Staffing Response Time
                       </div>
                     </div>
                     <div>
@@ -308,7 +308,7 @@ const Home = () => {
                         98%
                       </div>
                       <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Satisfaction
+                        Client Satisfaction Rate
                       </div>
                     </div>
                   </div>
