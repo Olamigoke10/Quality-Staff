@@ -14,7 +14,7 @@ const Home = () => {
             {/* Left Content */}
             <div className="flex flex-col justify-center space-y-8">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium w-fit">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-900 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-medium w-fit">
                 <span>🏆</span>
                 Reliable. Compassionate. 24/7 Care Staffing Across UK.
               </div>
@@ -22,7 +22,7 @@ const Home = () => {
               {/* Main Heading */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
                Your Trusted
-                <span className="block text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text dark:from-blue-400 dark:to-indigo-400">
+                <span className="block text-transparent bg-gradient-to-r from-blue-900 to-indigo-900 bg-clip-text dark:from-blue-400 dark:to-indigo-400">
                 Staffing
                 </span>
                 Partner
@@ -129,7 +129,7 @@ const Home = () => {
                       d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  How It Works
+                  We are Hiring!
                 </button>
               </div>
 
@@ -140,7 +140,7 @@ const Home = () => {
                     500+
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    Facilities
+                    Reliable Professionals
                   </div>
                 </div>
                 <div className="text-center">
@@ -170,12 +170,12 @@ const Home = () => {
                 {/* Header with Search */}
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                    Available Professionals
+                    Qualified Healthcare Professionals Ready for Your Facility
                   </h3>
                   <div className="relative">
                     <input
                       type="text"
-                      placeholder="Search specialties..."
+                      placeholder="Search roles, specialties, or certifications…"
                       className="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                     <svg
@@ -204,14 +204,15 @@ const Home = () => {
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
                         <h4 className="font-semibold text-gray-900 dark:text-white">
-                          Emily Stake
+                          Registered Nurse (RN)
                         </h4>
                         <span className="text-xs bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 px-2 py-1 rounded-full">
                           Available
                         </span>
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Registered Nurse
+                        Highly skilled Registered Nurse with extensive experience in acute care, patient monitoring, and evidence-based clinical support. 
+                        Reliable, compassionate, and trained to adapt quickly to fast-paced healthcare environments.
                       </p>
                       <div className="flex items-center gap-4 mt-1">
                         <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -232,14 +233,15 @@ const Home = () => {
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
                         <h4 className="font-semibold text-gray-900 dark:text-white">
-                          Dr. Michael Torres
+                          Emergency Medicine Physician
                         </h4>
                         <span className="text-xs bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 px-2 py-1 rounded-full">
                           Available
                         </span>
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Emergency Medicine
+                        Board-certified Emergency Medicine doctor with advanced trauma response training. 
+                        Experienced in high-acuity situations, rapid diagnostics, and providing life-saving interventions under pressure.
                       </p>
                       <div className="flex items-center gap-4 mt-1">
                         <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -260,14 +262,15 @@ const Home = () => {
                     <div className="flex-1">
                       <div className="flex items-center justify-between">
                         <h4 className="font-semibold text-gray-900 dark:text-white">
-                          Sarah Johnson
+                          Licensed Practical Nurse (LPN)
                         </h4>
                         <span className="text-xs bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400 px-2 py-1 rounded-full">
                           Busy
                         </span>
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Physical Therapist
+                        Compassionate LPN skilled in long-term care, rehabilitation support, and hands-on patient assistance. 
+                        Strong communication skills and a proven track record of improving patient comfort and continuity of care.
                       </p>
                       <div className="flex items-center gap-4 mt-1">
                         <span className="text-xs text-gray-500 dark:text-gray-400">
