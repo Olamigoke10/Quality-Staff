@@ -23,7 +23,13 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'no-unused-vars': [
+        'error',
+        {
+          // motion/react: `motion.div` is used in JSX but not always counted as a read of `motion`
+          varsIgnorePattern: '^([A-Z_].*|motion)$',
+        },
+      ],
     },
   },
 ])

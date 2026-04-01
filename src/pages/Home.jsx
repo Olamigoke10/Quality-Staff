@@ -1,8 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { SITE_NAME, SITE_TAGLINE } from "@/lib/site";
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>{SITE_NAME} — Healthcare staffing in Wales</title>
+        <meta
+          name="description"
+          content={`${SITE_NAME}: ${SITE_TAGLINE}. Reliable recruitment and workforce cover for care providers and professionals.`}
+        />
+      </Helmet>
       <section className="min-h-screen bg-white dark:bg-gray-900 relative overflow-hidden">
         {/* Abstract Background Shapes */}
         <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-full blur-3xl opacity-60 dark:from-blue-900/20 dark:to-indigo-900/20"></div>
@@ -104,17 +114,27 @@ const Home = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group relative bg-gradient-to-r from-blue-900 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-600/30 transition-all duration-300 hover:scale-105">
+                <Link
+                  to="/contact"
+                  className="group relative bg-gradient-to-r from-blue-900 to-indigo-600 text-center text-white px-8 py-4 rounded-xl font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-600/30 transition-all duration-300 hover:scale-105"
+                >
                   <span className="relative z-10">Find Staff Now</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-indigo-700 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </button>
+                  <div
+                    className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-800 to-indigo-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    aria-hidden="true"
+                  />
+                </Link>
 
-                <button className="group flex items-center justify-center gap-2 border-2 border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300">
+                <Link
+                  to="/contact"
+                  className="group flex items-center justify-center gap-2 border-2 border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300 px-8 py-4 rounded-xl font-semibold hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-400 transition-all duration-300"
+                >
                   <svg
                     className="w-5 h-5"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -130,33 +150,33 @@ const Home = () => {
                     />
                   </svg>
                   We are Hiring!
-                </button>
+                </Link>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 dark:border-gray-700">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    500+
+              {/* Trust highlights — qualitative, no unverified metrics */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 border-t border-gray-200 dark:border-gray-700">
+                <div className="text-center sm:text-left">
+                  <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
+                    Wales-focused
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    Reliable Professionals
+                    Local knowledge &amp; compliance-aware matching
                   </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    98%
+                <div className="text-center sm:text-left">
+                  <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
+                    Vetted professionals
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    Satisfaction
+                    Rigorous checks before placement
                   </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                    24/7
+                <div className="text-center sm:text-left">
+                  <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
+                    Responsive team
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">
-                    Support
+                    Support when shifts change at short notice
                   </div>
                 </div>
               </div>
@@ -169,9 +189,12 @@ const Home = () => {
               <div className="relative z-10 bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl shadow-blue-500/10 dark:shadow-blue-500/5 border border-gray-100 dark:border-gray-700">
                 {/* Header with Search */}
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                    Qualified Healthcare Professionals
+                  <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+                    Example roles we place
                   </h3>
+                  <p className="mb-3 text-xs text-gray-500 dark:text-gray-400">
+                    Illustrative profiles—not real individuals or availability.
+                  </p>
                   <div className="relative">
                     <input
                       type="text"
@@ -284,32 +307,28 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* Quick Stats Footer */}
-                <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
-                  <div className="grid grid-cols-3 gap-4 text-center">
+                {/* Summary strip */}
+                <div className="mt-6 border-t border-gray-200 pt-6 dark:border-gray-600">
+                  <div className="grid grid-cols-1 gap-3 text-center text-sm text-gray-600 dark:text-gray-400 sm:grid-cols-3">
                     <div>
-                      <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
-                        150+
-                      </div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Active Healthcare Professionals
-                      </div>
+                      <span className="font-semibold text-blue-600 dark:text-blue-400">Cover</span>
+                      <br />
+                      Ad hoc &amp; planned shifts
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-emerald-600 dark:text-emerald-400">
-                        24h
-                      </div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Average Staffing Response Time
-                      </div>
+                      <span className="font-semibold text-emerald-600 dark:text-emerald-400">Sectors</span>
+                      <br />
+                      Residential, community &amp; clinical support
                     </div>
                     <div>
-                      <div className="text-lg font-bold text-purple-600 dark:text-purple-400">
-                        98%
-                      </div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">
-                        Client Satisfaction Rate
-                      </div>
+                      <span className="font-semibold text-purple-600 dark:text-purple-400">Next step</span>
+                      <br />
+                      <Link
+                        to="/contact"
+                        className="text-blue-600 underline hover:text-blue-500 dark:text-blue-400"
+                      >
+                        Contact the team
+                      </Link>
                     </div>
                   </div>
                 </div>
