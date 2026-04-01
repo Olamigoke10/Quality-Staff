@@ -35,31 +35,40 @@ const Pricing = () => {
           content={`Flexible healthcare staffing packages from ${SITE_NAME}. Ad hoc cover, block bookings, and project support across Wales.`}
         />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-15%,rgb(59_130_246_/_0.1),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-15%,rgb(37_99_235_/_0.15),transparent)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
           <div className="text-center">
-            <p className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
               Pricing
             </p>
-            <h1 className="mt-2 text-4xl font-bold text-slate-900 dark:text-white">
+            <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 dark:text-white md:text-5xl">
               Packages that fit how you work
             </h1>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
               Every provider is different. We quote fairly based on role, location, urgency, and volume.
               Below is how we typically structure engagements—final rates are agreed after a short call.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-3">
+          <div className="mt-14 grid gap-8 lg:grid-cols-3 lg:items-stretch">
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`flex flex-col rounded-2xl border p-8 shadow-sm ${
+                className={`relative flex flex-col rounded-2xl border p-8 transition ${
                   tier.featured
-                    ? 'border-blue-500 bg-white ring-2 ring-blue-500 dark:bg-slate-800'
-                    : 'border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800'
+                    ? 'border-blue-500/80 bg-white shadow-xl shadow-blue-900/10 ring-2 ring-blue-500/30 dark:border-blue-500/50 dark:bg-slate-900/90 dark:shadow-blue-950/40 dark:ring-blue-400/20'
+                    : 'border-slate-200/90 bg-white/90 shadow-md shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm hover:border-slate-300 dark:border-slate-700/90 dark:bg-slate-900/70 dark:ring-white/5 dark:hover:border-slate-600'
                 }`}
               >
+                {tier.featured && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-900 to-indigo-600 px-4 py-1 text-xs font-semibold text-white shadow-md">
+                    Popular
+                  </span>
+                )}
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white">{tier.name}</h2>
                 <p className="mt-3 flex-1 text-slate-600 dark:text-slate-300">{tier.description}</p>
                 <ul className="mt-6 space-y-3 text-sm text-slate-700 dark:text-slate-300">
@@ -74,10 +83,10 @@ const Pricing = () => {
                 </ul>
                 <Link
                   to="/contact"
-                  className={`mt-8 block w-full rounded-xl py-3 text-center text-sm font-semibold transition ${
+                  className={`mt-8 block w-full rounded-xl py-3.5 text-center text-sm font-semibold transition ${
                     tier.featured
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : 'border border-slate-300 text-slate-900 hover:bg-slate-50 dark:border-slate-600 dark:text-white dark:hover:bg-slate-700'
+                      ? 'bg-gradient-to-r from-blue-900 to-indigo-600 text-white shadow-lg shadow-blue-900/20 hover:from-blue-800 hover:to-indigo-500'
+                      : 'border-2 border-slate-200 text-slate-900 hover:border-blue-200 hover:bg-slate-50 dark:border-slate-600 dark:text-white dark:hover:border-blue-500/40 dark:hover:bg-slate-800'
                   }`}
                 >
                   {tier.cta}

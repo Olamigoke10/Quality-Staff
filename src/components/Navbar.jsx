@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import QSC from '@/assets/QSC.svg'
 import { SITE_NAME } from '@/lib/site'
 
@@ -36,10 +36,12 @@ const Navbar = () => {
   }
 
   const getLinkClasses = ({ isActive }) => {
-    const baseClasses = 'block py-2 px-3 rounded-sm md:p-0 md:border-0 transition-colors duration-200'
-    const activeClasses = 'text-white bg-blue-700 md:bg-transparent md:text-blue-700 dark:text-white md:dark:text-blue-500'
-    const inactiveClasses = 'text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent'
-    
+    const baseClasses =
+      'block rounded-lg py-2.5 px-3 text-[15px] font-medium transition-colors duration-200 md:inline-block md:rounded-full md:py-2 md:px-4 md:text-sm'
+    const activeClasses =
+      'bg-blue-700 text-white md:bg-blue-50 md:text-blue-900 dark:bg-blue-950/50 dark:text-blue-200 md:dark:bg-blue-950/60 md:dark:text-blue-300'
+    const inactiveClasses =
+      'text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-white/10 md:text-slate-600 md:hover:bg-slate-100/90 md:hover:text-blue-800 dark:md:text-slate-300 dark:md:hover:bg-white/10 dark:md:hover:text-white'
     return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`
   }
 
@@ -53,8 +55,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 shadow-md sticky top-0 z-50">
-        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-2 p-4">
+      <nav className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 shadow-sm shadow-slate-900/5 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-950/80 dark:shadow-black/20">
+        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-5">
           <NavLink to="/" className="flex min-w-0 items-center space-x-3 rtl:space-x-reverse" onClick={closeMenu}>
             <img src={QSC} className="h-14 w-auto shrink-0 sm:h-16" alt="" />
             <span className="max-w-[min(12rem,42vw)] truncate text-lg font-semibold text-blue-900 dark:text-white sm:max-w-none sm:whitespace-nowrap sm:text-2xl">
@@ -101,28 +103,30 @@ const Navbar = () => {
           </div>
 
           {/* Desktop menu - always visible on md screens and up */}
-          <div className="hidden w-full md:block md:w-auto" id="navbar-desktop">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <div className="hidden w-full items-center gap-2 md:flex md:w-auto" id="navbar-desktop">
+            <ul className="mr-2 flex flex-col gap-0.5 p-4 md:mr-0 md:flex-row md:items-center md:gap-1 md:p-0">
               {navItems.map((item) => (
                 <li key={item.path}>
-                  <NavLink 
-                    to={item.path} 
-                    className={getLinkClasses}
-                    end={item.end}
-                  >
+                  <NavLink to={item.path} className={getLinkClasses} end={item.end}>
                     {item.label}
                   </NavLink>
                 </li>
               ))}
             </ul>
+            <Link
+              to="/contact"
+              className="ml-1 hidden shrink-0 rounded-full bg-gradient-to-r from-blue-900 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-blue-900/25 transition hover:from-blue-800 hover:to-indigo-500 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 md:inline-flex"
+            >
+              Enquire
+            </Link>
           </div>
         </div>
 
         {/* Mobile menu - simple show/hide without complex transitions */}
-        <div 
+        <div
           className={`${
             isMenuOpen ? 'block' : 'hidden'
-          } md:hidden absolute top-full left-0 right-0 z-50 bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 shadow-lg`}
+          } absolute left-0 right-0 top-full z-50 border-b border-slate-200/80 bg-white/95 shadow-lg shadow-slate-900/10 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/95 md:hidden`}
           id="navbar-mobile"
         >
           <ul className="font-medium flex flex-col p-4">

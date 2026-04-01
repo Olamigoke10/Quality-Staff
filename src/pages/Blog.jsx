@@ -84,7 +84,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 px-4 py-8 dark:from-slate-900 dark:to-slate-800">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 px-4 py-10 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 sm:px-6 lg:py-14">
       <Helmet>
         <title>Blog — {SITE_NAME}</title>
         <meta
@@ -92,10 +92,19 @@ const Blog = () => {
           content={`Insights on healthcare staffing, compliance, and careers in Wales from ${SITE_NAME}.`}
         />
       </Helmet>
-      <div className="mx-auto max-w-7xl">
-        <header className="mb-12 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-slate-800 dark:text-white">Insights</h1>
-          <p className="text-lg text-slate-600 dark:text-slate-300">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_45%_at_50%_-10%,rgb(59_130_246_/_0.08),transparent)] dark:bg-[radial-gradient(ellipse_80%_45%_at_50%_-10%,rgb(37_99_235_/_0.12),transparent)]"
+        aria-hidden="true"
+      />
+      <div className="relative mx-auto max-w-7xl">
+        <header className="mb-14 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
+            Blog
+          </p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 dark:text-white md:text-5xl">
+            Insights
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             Practical notes for care providers and professionals working in Wales.
           </p>
         </header>
@@ -132,11 +141,14 @@ const Blog = () => {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <div className="rounded-lg bg-white p-6 shadow-lg dark:bg-slate-800">
-            <h3 className="mb-2 text-xl font-semibold text-slate-800 dark:text-white">Need cover or a new role?</h3>
-            <p className="text-slate-600 dark:text-slate-300">
-              <Link to="/contact" className="font-medium text-blue-600 hover:text-blue-500 dark:text-blue-400">
+        <div className="mt-16 text-center">
+          <div className="mx-auto max-w-2xl rounded-2xl border border-slate-200/90 bg-white/90 p-8 shadow-xl shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm dark:border-slate-700/90 dark:bg-slate-900/80 dark:ring-white/10">
+            <h3 className="text-xl font-semibold text-slate-900 dark:text-white">Need cover or a new role?</h3>
+            <p className="mt-3 text-slate-600 dark:text-slate-300">
+              <Link
+                to="/contact"
+                className="font-semibold text-blue-700 underline decoration-blue-700/30 underline-offset-2 transition hover:text-blue-900 dark:text-blue-400 dark:decoration-blue-400/30 dark:hover:text-blue-300"
+              >
                 Contact our team
               </Link>{' '}
               — we are happy to discuss your service or your next move.

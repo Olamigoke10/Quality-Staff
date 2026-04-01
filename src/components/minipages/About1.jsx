@@ -5,8 +5,12 @@ const About1 = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gray-800 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-16">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgb(59_130_246_/_0.15),transparent)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl space-y-6 text-center">
             <p className="text-sm font-semibold uppercase tracking-wide text-blue-400">Quality Staffing Care</p>
             <h1 className="text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
@@ -24,7 +28,7 @@ const About1 = () => {
             <div className="pt-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3 font-medium text-white shadow-lg transition-colors duration-200 hover:bg-blue-700"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-3.5 font-semibold text-white shadow-lg shadow-blue-900/25 transition hover:from-blue-500 hover:to-indigo-500"
               >
                 Work with Us
               </Link>
@@ -32,7 +36,7 @@ const About1 = () => {
           </div>
         </div>
 
-        <div className="pointer-events-none absolute -right-4 -top-4 z-20 max-w-xs rounded-2xl border border-gray-100 bg-white p-4 shadow-xl dark:border-gray-700 dark:bg-gray-800">
+        <div className="pointer-events-none absolute -right-2 -top-3 z-20 hidden max-w-[11rem] rounded-2xl border border-white/20 bg-white/95 p-4 shadow-xl shadow-slate-900/15 backdrop-blur-sm dark:border-slate-600 dark:bg-slate-900/95 sm:block sm:-right-4 sm:max-w-xs">
           <div className="flex items-start gap-3">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-green-600">
               <svg className="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -55,7 +59,7 @@ const About1 = () => {
       </section>
 
       {/* Story Section */}
-      <section className="bg-white py-16">
+      <section className="bg-gradient-to-b from-white to-slate-50 py-16 dark:from-slate-900 dark:to-slate-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12">
             <div className="lg:col-span-1">

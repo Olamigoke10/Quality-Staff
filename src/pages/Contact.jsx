@@ -29,35 +29,43 @@ const Contact = () => {
           content={`Get in touch with ${SITE_NAME} for healthcare staffing in Wales. Phone, email, or send us a message.`}
         />
       </Helmet>
-      <div className="min-h-screen bg-slate-50 dark:bg-slate-900">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-400">
+      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+        <div
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-10%,rgb(59_130_246_/_0.12),transparent)] dark:bg-[radial-gradient(ellipse_70%_40%_at_50%_-10%,rgb(37_99_235_/_0.18),transparent)]"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">
             Contact
           </p>
-          <h1 className="mt-2 text-4xl font-bold text-slate-900 dark:text-white">
+          <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 dark:text-white md:text-5xl">
             Talk to our team
           </h1>
-          <p className="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          <p className="mt-5 text-lg leading-relaxed text-slate-600 dark:text-slate-300">
             Whether you need cover for a shift or you are a care professional looking for roles across
             Wales, we are here to help.
           </p>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
             <a
               href={`tel:${SITE_PHONE_TEL}`}
-              className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-blue-500"
+              className="group rounded-2xl border border-slate-200/90 bg-white/90 p-6 shadow-md shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm transition hover:border-blue-300/80 hover:shadow-lg dark:border-slate-700/90 dark:bg-slate-900/80 dark:ring-white/10 dark:hover:border-blue-500/50"
             >
-              <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Phone</p>
-              <p className="mt-1 text-lg font-semibold text-slate-900 dark:text-white">
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                Phone
+              </p>
+              <p className="mt-2 text-lg font-semibold text-slate-900 transition group-hover:text-blue-800 dark:text-white dark:group-hover:text-blue-300">
                 {SITE_PHONE_DISPLAY}
               </p>
             </a>
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-blue-300 dark:border-slate-700 dark:bg-slate-800 dark:hover:border-blue-500"
+              className="group rounded-2xl border border-slate-200/90 bg-white/90 p-6 shadow-md shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm transition hover:border-blue-300/80 hover:shadow-lg dark:border-slate-700/90 dark:bg-slate-900/80 dark:ring-white/10 dark:hover:border-blue-500/50"
             >
-              <p className="text-sm font-medium text-slate-500 dark:text-slate-400">Email</p>
-              <p className="mt-1 text-lg font-semibold text-slate-900 dark:text-white break-all">
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                Email
+              </p>
+              <p className="mt-2 break-all text-lg font-semibold text-slate-900 transition group-hover:text-blue-800 dark:text-white dark:group-hover:text-blue-300">
                 {SITE_EMAIL}
               </p>
             </a>
@@ -65,7 +73,7 @@ const Contact = () => {
 
           <form
             onSubmit={handleSubmit}
-            className="mt-12 space-y-6 rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800"
+            className="mt-12 space-y-6 rounded-2xl border border-slate-200/90 bg-white/95 p-8 shadow-xl shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm dark:border-slate-700/90 dark:bg-slate-900/90 dark:ring-white/10"
           >
             <h2 className="text-xl font-semibold text-slate-900 dark:text-white">Send a message</h2>
             <p className="text-sm text-slate-600 dark:text-slate-400">
@@ -81,7 +89,7 @@ const Contact = () => {
                 name="name"
                 type="text"
                 autoComplete="name"
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:border-slate-600 dark:bg-slate-950/50 dark:text-white"
               />
             </div>
             <div>
@@ -94,7 +102,7 @@ const Contact = () => {
                 type="email"
                 required
                 autoComplete="email"
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:border-slate-600 dark:bg-slate-950/50 dark:text-white"
               />
             </div>
             <div>
@@ -106,12 +114,12 @@ const Contact = () => {
                 name="message"
                 required
                 rows={5}
-                className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white"
+                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:border-slate-600 dark:bg-slate-950/50 dark:text-white"
               />
             </div>
             <button
               type="submit"
-              className="w-full rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 sm:w-auto"
+              className="w-full rounded-xl bg-gradient-to-r from-blue-900 to-indigo-600 px-6 py-3.5 font-semibold text-white shadow-lg shadow-blue-900/20 transition hover:from-blue-800 hover:to-indigo-500 sm:w-auto"
             >
               Open in email
             </button>
