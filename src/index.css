@@ -76,6 +76,15 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --glass-bg: rgb(255 255 255 / 0.78);
+  --glass-bg-subtle: rgb(255 255 255 / 0.62);
+  --glass-bg-strong: rgb(255 255 255 / 0.88);
+  --glass-border: rgb(255 255 255 / 0.55);
+  --glass-border-tint: rgb(148 163 184 / 0.4);
+  --glass-shadow-outer: 0 16px 48px -12px rgb(15 23 42 / 0.12), 0 4px 20px -4px rgb(15 23 42 / 0.08);
+  --glass-shadow-inset: inset 0 1px 0 0 rgb(255 255 255 / 0.75);
+  --glass-nav-bg: rgb(255 255 255 / 0.72);
+  --glass-overlay: rgb(255 255 255 / 0.45);
 }
 
 .dark {
@@ -110,6 +119,15 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --glass-bg: rgb(15 23 42 / 0.78);
+  --glass-bg-subtle: rgb(15 23 42 / 0.62);
+  --glass-bg-strong: rgb(15 23 42 / 0.9);
+  --glass-border: rgb(255 255 255 / 0.14);
+  --glass-border-tint: rgb(255 255 255 / 0.1);
+  --glass-shadow-outer: 0 16px 48px -12px rgb(0 0 0 / 0.5), 0 4px 20px -4px rgb(0 0 0 / 0.3);
+  --glass-shadow-inset: inset 0 1px 0 0 rgb(255 255 255 / 0.1);
+  --glass-nav-bg: rgb(15 23 42 / 0.72);
+  --glass-overlay: rgb(0 0 0 / 0.4);
 }
 
 @layer base {
@@ -141,5 +159,165 @@
   html.dark ::selection {
     background-color: rgb(30 64 175 / 0.45);
     color: rgb(241 245 249);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background-color: var(--glass-bg);
+    border: 1px solid var(--glass-border-tint);
+    border-radius: 1rem;
+    box-shadow: var(--glass-shadow-outer), var(--glass-shadow-inset);
+  }
+
+  @supports (backdrop-filter: blur(1px)) {
+    .glass-panel {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+  }
+
+  @supports not (backdrop-filter: blur(1px)) {
+    .glass-panel {
+      background-color: var(--glass-bg-strong);
+    }
+  }
+
+  .glass-panel-subtle {
+    background-color: var(--glass-bg-subtle);
+    border: 1px solid var(--glass-border-tint);
+    border-radius: 9999px;
+    box-shadow: 0 4px 16px -4px rgb(15 23 42 / 0.08), var(--glass-shadow-inset);
+  }
+
+  @supports (backdrop-filter: blur(1px)) {
+    .glass-panel-subtle {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+  }
+
+  .dark .glass-panel-subtle {
+    box-shadow: 0 4px 16px -4px rgb(0 0 0 / 0.35), var(--glass-shadow-inset);
+  }
+
+  .glass-input {
+    background-color: rgb(255 255 255 / 0.55);
+    border: 1px solid var(--glass-border-tint);
+    border-radius: 0.75rem;
+  }
+
+  @supports (backdrop-filter: blur(1px)) {
+    .glass-input {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  }
+
+  .dark .glass-input {
+    background-color: rgb(15 23 42 / 0.55);
+  }
+
+  .glass-nav {
+    background-color: var(--glass-nav-bg);
+    border-bottom: 1px solid var(--glass-border-tint);
+    box-shadow: 0 4px 24px -8px rgb(15 23 42 / 0.1), var(--glass-shadow-inset);
+  }
+
+  @supports (backdrop-filter: blur(1px)) {
+    .glass-nav {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  }
+
+  .dark .glass-nav {
+    box-shadow: 0 4px 24px -8px rgb(0 0 0 / 0.35), var(--glass-shadow-inset);
+  }
+
+  .glass-mobile-sheet {
+    background-color: var(--glass-bg-strong);
+    border-bottom: 1px solid var(--glass-border-tint);
+    box-shadow: 0 12px 40px -8px rgb(15 23 42 / 0.15);
+  }
+
+  @supports (backdrop-filter: blur(1px)) {
+    .glass-mobile-sheet {
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+  }
+
+  .dark .glass-mobile-sheet {
+    box-shadow: 0 12px 40px -8px rgb(0 0 0 / 0.45);
+  }
+
+  .glass-icon-btn {
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    transition: background-color 150ms, border-color 150ms, box-shadow 150ms;
+  }
+
+  .glass-icon-btn:hover {
+    background-color: rgb(255 255 255 / 0.45);
+    border-color: var(--glass-border-tint);
+    box-shadow: 0 2px 8px -2px rgb(15 23 42 / 0.06);
+  }
+
+  .dark .glass-icon-btn:hover {
+    background-color: rgb(255 255 255 / 0.08);
+    border-color: var(--glass-border-tint);
+  }
+
+  .page-gradient-shell {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(248 250 252),
+      rgb(255 255 255),
+      rgb(241 245 249)
+    );
+  }
+
+  .dark .page-gradient-shell {
+    background-image: linear-gradient(
+      to bottom,
+      rgb(2 6 23),
+      rgb(15 23 42),
+      rgb(2 6 23)
+    );
+  }
+
+  /* Footer is always dark; glass uses slate tones regardless of theme toggle */
+  .glass-footer-inner {
+    background-color: rgb(30 41 59 / 0.42);
+    border: 1px solid rgb(148 163 184 / 0.18);
+    border-radius: 1.5rem;
+    box-shadow:
+      0 16px 48px -12px rgb(0 0 0 / 0.4),
+      inset 0 1px 0 0 rgb(255 255 255 / 0.08);
+  }
+
+  @supports (backdrop-filter: blur(1px)) {
+    .glass-footer-inner {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  }
+
+  /* Frosted panel on dark hero bands (About, etc.) */
+  .glass-hero-dark {
+    background-color: rgb(255 255 255 / 0.08);
+    border: 1px solid rgb(255 255 255 / 0.16);
+    border-radius: 1.5rem;
+    box-shadow:
+      0 24px 56px -16px rgb(0 0 0 / 0.45),
+      inset 0 1px 0 0 rgb(255 255 255 / 0.12);
+  }
+
+  @supports (backdrop-filter: blur(1px)) {
+    .glass-hero-dark {
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+    }
   }
 }

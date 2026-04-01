@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/85 shadow-sm shadow-slate-900/5 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-950/80 dark:shadow-black/20">
+      <nav className="glass-nav sticky top-0 z-50">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between gap-3 px-4 py-3 sm:px-5">
           <NavLink to="/" className="flex min-w-0 items-center space-x-3 rtl:space-x-reverse" onClick={closeMenu}>
             <img src={QSC} className="h-14 w-auto shrink-0 sm:h-16" alt="" />
@@ -68,7 +68,7 @@ const Navbar = () => {
             <button
               type="button"
               onClick={toggleDark}
-              className="inline-flex rounded-lg p-2 text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800"
+              className="glass-icon-btn inline-flex p-2 text-gray-600 dark:text-gray-300"
               aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
             >
               {dark ? (
@@ -85,7 +85,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
+              className="glass-icon-btn inline-flex h-10 w-10 items-center justify-center text-sm text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30 dark:text-gray-400 md:hidden"
               aria-controls="navbar-mobile"
               aria-expanded={isMenuOpen}
             >
@@ -115,7 +115,7 @@ const Navbar = () => {
             </ul>
             <Link
               to="/contact"
-              className="ml-1 hidden shrink-0 rounded-full bg-gradient-to-r from-blue-900 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-blue-900/25 transition hover:from-blue-800 hover:to-indigo-500 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 md:inline-flex"
+              className="ml-1 hidden shrink-0 rounded-full bg-gradient-to-r from-blue-900 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-900/30 ring-1 ring-white/20 transition hover:from-blue-800 hover:to-indigo-500 hover:shadow-xl hover:shadow-blue-900/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 md:inline-flex"
             >
               Enquire
             </Link>
@@ -126,7 +126,7 @@ const Navbar = () => {
         <div
           className={`${
             isMenuOpen ? 'block' : 'hidden'
-          } absolute left-0 right-0 top-full z-50 border-b border-slate-200/80 bg-white/95 shadow-lg shadow-slate-900/10 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/95 md:hidden`}
+          } glass-mobile-sheet absolute left-0 right-0 top-full z-50 md:hidden`}
           id="navbar-mobile"
         >
           <ul className="font-medium flex flex-col p-4">
@@ -154,7 +154,7 @@ const Navbar = () => {
         {/* Overlay for mobile menu */}
         {isMenuOpen && (
           <div
-            className="fixed inset-0 z-40 bg-black/50 md:hidden"
+            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm md:hidden"
             onClick={closeMenu}
             aria-hidden="true"
           />

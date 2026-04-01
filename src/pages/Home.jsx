@@ -14,18 +14,22 @@ const Home = () => {
           content={`${SITE_NAME}: ${SITE_TAGLINE}. Reliable recruitment and workforce cover for care providers and professionals.`}
         />
       </Helmet>
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgb(59_130_246_/_0.15),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgb(37_99_235_/_0.2),transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgb(59_130_246_/_0.2),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgb(37_99_235_/_0.28),transparent)]"
           aria-hidden="true"
         />
-        <div className="pointer-events-none absolute -right-24 top-24 h-96 w-96 rounded-full bg-blue-400/20 blur-3xl dark:bg-blue-600/15" aria-hidden="true" />
-        <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-teal-400/15 blur-3xl dark:bg-teal-600/10" aria-hidden="true" />
+        <div
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[min(28rem,90vw)] w-[min(28rem,90vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-400/12 blur-3xl dark:bg-indigo-600/14"
+          aria-hidden="true"
+        />
+        <div className="pointer-events-none absolute -right-24 top-24 h-96 w-96 rounded-full bg-blue-400/25 blur-3xl dark:bg-blue-600/18" aria-hidden="true" />
+        <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-teal-400/18 blur-3xl dark:bg-teal-600/12" aria-hidden="true" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid min-h-screen items-center gap-14 py-16 lg:grid-cols-2 lg:gap-16 lg:py-20">
             <div className="flex flex-col justify-center space-y-8">
-              <div className="inline-flex w-fit items-center gap-2 rounded-full border border-blue-200/80 bg-white/90 px-4 py-2 text-sm font-medium text-blue-900 shadow-sm backdrop-blur-sm dark:border-blue-500/30 dark:bg-slate-900/80 dark:text-blue-100">
+              <div className="glass-panel-subtle inline-flex w-fit items-center gap-2 px-4 py-2 text-sm font-medium text-blue-900 ring-1 ring-blue-500/15 dark:text-blue-100 dark:ring-blue-400/25">
                 <HeartHandshake className="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" aria-hidden />
                 <span className="tracking-wide">24/7 care staffing · Wales &amp; UK</span>
               </div>
@@ -49,8 +53,8 @@ const Home = () => {
               </div>
 
               <div className="grid gap-3 sm:grid-cols-3">
-                <div className="flex items-start gap-3 rounded-2xl border border-slate-200/80 bg-white/70 p-4 shadow-sm backdrop-blur-sm dark:border-slate-700/80 dark:bg-slate-800/50">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400">
+                <div className="glass-panel flex max-sm:bg-[var(--glass-bg-strong)] items-start gap-3 p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50/90 text-emerald-700 shadow-inner ring-1 ring-emerald-200/50 dark:bg-emerald-950/50 dark:text-emerald-400 dark:ring-emerald-800/40">
                     <Clock className="h-5 w-5" strokeWidth={2} aria-hidden />
                   </span>
                   <span>
@@ -58,8 +62,8 @@ const Home = () => {
                     <span className="text-sm text-slate-500 dark:text-slate-400">Same-day response</span>
                   </span>
                 </div>
-                <div className="flex items-start gap-3 rounded-2xl border border-slate-200/80 bg-white/70 p-4 shadow-sm backdrop-blur-sm dark:border-slate-700/80 dark:bg-slate-800/50">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400">
+                <div className="glass-panel flex max-sm:bg-[var(--glass-bg-strong)] items-start gap-3 p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50/90 text-emerald-700 shadow-inner ring-1 ring-emerald-200/50 dark:bg-emerald-950/50 dark:text-emerald-400 dark:ring-emerald-800/40">
                     <ShieldCheck className="h-5 w-5" strokeWidth={2} aria-hidden />
                   </span>
                   <span>
@@ -67,8 +71,8 @@ const Home = () => {
                     <span className="text-sm text-slate-500 dark:text-slate-400">Compliance-focused</span>
                   </span>
                 </div>
-                <div className="flex items-start gap-3 rounded-2xl border border-slate-200/80 bg-white/70 p-4 shadow-sm backdrop-blur-sm dark:border-slate-700/80 dark:bg-slate-800/50">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400">
+                <div className="glass-panel flex max-sm:bg-[var(--glass-bg-strong)] items-start gap-3 p-4">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50/90 text-emerald-700 shadow-inner ring-1 ring-emerald-200/50 dark:bg-emerald-950/50 dark:text-emerald-400 dark:ring-emerald-800/40">
                     <Activity className="h-5 w-5" strokeWidth={2} aria-hidden />
                   </span>
                   <span>
@@ -81,19 +85,19 @@ const Home = () => {
               <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center sm:gap-4">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-900 to-indigo-600 px-8 py-3.5 text-center text-base font-semibold text-white shadow-lg shadow-blue-900/25 transition hover:from-blue-800 hover:to-indigo-500 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-blue-900 to-indigo-600 px-8 py-3.5 text-center text-base font-semibold text-white shadow-lg shadow-blue-900/30 ring-1 ring-white/20 transition hover:from-blue-800 hover:to-indigo-500 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
                   Find staff now
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-white/80 px-8 py-3.5 text-base font-semibold text-slate-800 backdrop-blur-sm transition hover:border-blue-300 hover:text-blue-800 dark:border-slate-600 dark:bg-slate-800/50 dark:text-slate-100 dark:hover:border-blue-500 dark:hover:text-blue-200"
+                  className="glass-panel inline-flex items-center justify-center gap-2 rounded-xl px-8 py-3.5 text-base font-semibold text-slate-800 transition hover:ring-2 hover:ring-blue-400/30 dark:text-slate-100"
                 >
                   We are hiring
                 </Link>
               </div>
 
-              <div className="grid gap-4 border-t border-slate-200/90 pt-8 dark:border-slate-700/90 sm:grid-cols-3">
+              <div className="grid gap-4 border-t border-slate-200/60 pt-8 dark:border-slate-700/60 sm:grid-cols-3">
                 {[
                   { title: "Wales-focused", desc: "Local knowledge & compliance-aware matching" },
                   { title: "Vetted professionals", desc: "Rigorous checks before placement" },
@@ -101,7 +105,7 @@ const Home = () => {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-2xl bg-slate-100/80 px-4 py-3 text-center sm:text-left dark:bg-slate-800/60"
+                    className="glass-panel max-sm:bg-[var(--glass-bg-strong)] px-4 py-3 text-center sm:text-left"
                   >
                     <p className="font-semibold text-blue-800 dark:text-blue-300">{item.title}</p>
                     <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">{item.desc}</p>
@@ -113,7 +117,7 @@ const Home = () => {
             {/* Right Content - Hero Image/Illustration */}
             {/* Right Content - Modern Healthcare Staffing Visual */}
             <div className="relative lg:pl-4">
-              <div className="relative z-10 rounded-3xl border border-slate-200/90 bg-white/90 p-6 shadow-2xl shadow-slate-900/10 ring-1 ring-slate-900/5 backdrop-blur-md dark:border-slate-700/90 dark:bg-slate-900/90 dark:shadow-black/40 dark:ring-white/10 sm:p-8">
+              <div className="glass-panel relative z-10 rounded-3xl p-6 sm:p-8">
                 <div className="mb-6">
                   <h3 className="mb-1 text-lg font-semibold text-slate-900 dark:text-white">
                     Example roles we place
@@ -125,7 +129,7 @@ const Home = () => {
                     <input
                       type="text"
                       placeholder="Search roles, specialties, or certifications…"
-                      className="w-full rounded-xl border border-slate-200 bg-slate-50/80 py-3 pl-10 pr-4 text-slate-900 placeholder-slate-400 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 dark:border-slate-600 dark:bg-slate-800/80 dark:text-white dark:placeholder-slate-500"
+                      className="glass-input w-full py-3 pl-10 pr-4 text-slate-900 placeholder-slate-400 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/30 dark:text-white dark:placeholder-slate-500"
                     />
                     <svg
                       className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400"
@@ -145,7 +149,7 @@ const Home = () => {
 
                 {/* Staff Cards Grid */}
                 <div className="space-y-3">
-                  <div className="flex gap-4 rounded-2xl border border-blue-100/90 bg-gradient-to-br from-blue-50/90 to-white p-4 transition hover:border-blue-200 dark:border-blue-900/40 dark:from-blue-950/40 dark:to-slate-900/50 dark:hover:border-blue-800">
+                  <div className="flex gap-4 rounded-2xl border border-blue-200/40 bg-gradient-to-br from-blue-50/70 to-white/50 p-4 shadow-lg shadow-blue-900/5 ring-1 ring-white/60 backdrop-blur-xl transition hover:border-blue-300/60 dark:border-blue-800/40 dark:from-blue-950/45 dark:to-slate-900/55 dark:ring-white/5 dark:hover:border-blue-600/50">
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-md shadow-blue-500/25">
                       <Stethoscope className="h-7 w-7" strokeWidth={2} aria-hidden />
                     </div>
@@ -169,7 +173,7 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-4 rounded-2xl border border-emerald-100/90 bg-gradient-to-br from-emerald-50/90 to-white p-4 transition hover:border-emerald-200 dark:border-emerald-900/40 dark:from-emerald-950/30 dark:to-slate-900/50 dark:hover:border-emerald-800">
+                  <div className="flex gap-4 rounded-2xl border border-emerald-200/40 bg-gradient-to-br from-emerald-50/70 to-white/50 p-4 shadow-lg shadow-emerald-900/5 ring-1 ring-white/60 backdrop-blur-xl transition hover:border-emerald-300/60 dark:border-emerald-800/40 dark:from-emerald-950/35 dark:to-slate-900/55 dark:ring-white/5 dark:hover:border-emerald-600/50">
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-md shadow-emerald-500/25">
                       <Activity className="h-7 w-7" strokeWidth={2} aria-hidden />
                     </div>
@@ -192,7 +196,7 @@ const Home = () => {
                     </div>
                   </div>
 
-                  <div className="flex gap-4 rounded-2xl border border-violet-100/90 bg-gradient-to-br from-violet-50/90 to-white p-4 transition hover:border-violet-200 dark:border-violet-900/40 dark:from-violet-950/30 dark:to-slate-900/50 dark:hover:border-violet-800">
+                  <div className="flex gap-4 rounded-2xl border border-violet-200/40 bg-gradient-to-br from-violet-50/70 to-white/50 p-4 shadow-lg shadow-violet-900/5 ring-1 ring-white/60 backdrop-blur-xl transition hover:border-violet-300/60 dark:border-violet-800/40 dark:from-violet-950/35 dark:to-slate-900/55 dark:ring-white/5 dark:hover:border-violet-600/50">
                     <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 text-white shadow-md shadow-violet-500/25">
                       <UserRound className="h-7 w-7" strokeWidth={2} aria-hidden />
                     </div>
@@ -217,17 +221,17 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="mt-6 border-t border-slate-200 pt-6 dark:border-slate-600/80">
+                <div className="mt-6 border-t border-slate-200/70 pt-6 dark:border-slate-600/60">
                   <div className="grid grid-cols-1 gap-4 text-center text-sm text-slate-600 dark:text-slate-400 sm:grid-cols-3 sm:gap-3">
-                    <div className="rounded-xl bg-slate-50/90 py-3 dark:bg-slate-800/50">
+                    <div className="glass-panel rounded-xl py-3">
                       <span className="font-semibold text-blue-700 dark:text-blue-400">Cover</span>
                       <p className="mt-1 text-xs sm:text-sm">Ad hoc &amp; planned shifts</p>
                     </div>
-                    <div className="rounded-xl bg-slate-50/90 py-3 dark:bg-slate-800/50">
+                    <div className="glass-panel rounded-xl py-3">
                       <span className="font-semibold text-emerald-700 dark:text-emerald-400">Sectors</span>
                       <p className="mt-1 text-xs sm:text-sm">Residential, community &amp; clinical</p>
                     </div>
-                    <div className="rounded-xl bg-slate-50/90 py-3 dark:bg-slate-800/50">
+                    <div className="glass-panel rounded-xl py-3">
                       <span className="font-semibold text-violet-700 dark:text-violet-400">Next step</span>
                       <p className="mt-1">
                         <Link
@@ -242,7 +246,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <div className="absolute -right-2 -top-3 z-20 max-w-[11.5rem] rounded-2xl border border-slate-200/90 bg-white/95 p-4 shadow-xl shadow-slate-900/10 backdrop-blur-sm dark:border-slate-600 dark:bg-slate-900/95 sm:-right-4 sm:max-w-xs">
+              <div className="glass-panel absolute -right-2 -top-3 z-20 max-w-[11.5rem] p-4 sm:-right-4 sm:max-w-xs">
                 <div className="flex items-start gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-md">
                     <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -277,7 +281,7 @@ const Home = () => {
           <span className="text-[10px] font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500">
             Scroll
           </span>
-          <div className="flex h-9 w-5 justify-center rounded-full border-2 border-slate-300 dark:border-slate-600">
+          <div className="flex h-9 w-5 justify-center rounded-full border border-slate-300/70 bg-white/35 shadow-inner backdrop-blur-sm dark:border-slate-500/50 dark:bg-slate-800/40">
             <div className="mt-1.5 h-2 w-0.5 animate-pulse rounded-full bg-slate-400 dark:bg-slate-500" />
           </div>
         </div>

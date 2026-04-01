@@ -29,9 +29,13 @@ const Contact = () => {
           content={`Get in touch with ${SITE_NAME} for healthcare staffing in Wales. Phone, email, or send us a message.`}
         />
       </Helmet>
-      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-10%,rgb(59_130_246_/_0.12),transparent)] dark:bg-[radial-gradient(ellipse_70%_40%_at_50%_-10%,rgb(37_99_235_/_0.18),transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_-10%,rgb(59_130_246_/_0.18),transparent)] dark:bg-[radial-gradient(ellipse_70%_40%_at_50%_-10%,rgb(37_99_235_/_0.22),transparent)]"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute -right-20 top-40 h-72 w-72 rounded-full bg-blue-400/15 blur-3xl dark:bg-blue-600/12"
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -49,7 +53,7 @@ const Contact = () => {
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
             <a
               href={`tel:${SITE_PHONE_TEL}`}
-              className="group rounded-2xl border border-slate-200/90 bg-white/90 p-6 shadow-md shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm transition hover:border-blue-300/80 hover:shadow-lg dark:border-slate-700/90 dark:bg-slate-900/80 dark:ring-white/10 dark:hover:border-blue-500/50"
+              className="glass-panel group block max-sm:bg-[var(--glass-bg-strong)] p-6 transition hover:ring-2 hover:ring-blue-400/25"
             >
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 Phone
@@ -60,7 +64,7 @@ const Contact = () => {
             </a>
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="group rounded-2xl border border-slate-200/90 bg-white/90 p-6 shadow-md shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm transition hover:border-blue-300/80 hover:shadow-lg dark:border-slate-700/90 dark:bg-slate-900/80 dark:ring-white/10 dark:hover:border-blue-500/50"
+              className="glass-panel group block max-sm:bg-[var(--glass-bg-strong)] p-6 transition hover:ring-2 hover:ring-blue-400/25"
             >
               <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 Email
@@ -73,7 +77,7 @@ const Contact = () => {
 
           <form
             onSubmit={handleSubmit}
-            className="mt-12 space-y-6 rounded-2xl border border-slate-200/90 bg-white/95 p-8 shadow-xl shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm dark:border-slate-700/90 dark:bg-slate-900/90 dark:ring-white/10"
+            className="glass-panel mt-12 max-sm:bg-[var(--glass-bg-strong)] space-y-6 p-8"
           >
             <h2 className="text-xl font-semibold text-slate-900 dark:text-white">Send a message</h2>
             <p className="text-sm text-slate-600 dark:text-slate-400">
@@ -89,7 +93,7 @@ const Contact = () => {
                 name="name"
                 type="text"
                 autoComplete="name"
-                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:border-slate-600 dark:bg-slate-950/50 dark:text-white"
+                className="glass-input mt-1.5 w-full px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:text-white"
               />
             </div>
             <div>
@@ -102,7 +106,7 @@ const Contact = () => {
                 type="email"
                 required
                 autoComplete="email"
-                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:border-slate-600 dark:bg-slate-950/50 dark:text-white"
+                className="glass-input mt-1.5 w-full px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:text-white"
               />
             </div>
             <div>
@@ -114,12 +118,12 @@ const Contact = () => {
                 name="message"
                 required
                 rows={5}
-                className="mt-1.5 w-full rounded-xl border border-slate-200 bg-slate-50/80 px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:border-slate-600 dark:bg-slate-950/50 dark:text-white"
+                className="glass-input mt-1.5 w-full px-4 py-3 text-slate-900 transition focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500/25 dark:text-white"
               />
             </div>
             <button
               type="submit"
-              className="w-full rounded-xl bg-gradient-to-r from-blue-900 to-indigo-600 px-6 py-3.5 font-semibold text-white shadow-lg shadow-blue-900/20 transition hover:from-blue-800 hover:to-indigo-500 sm:w-auto"
+              className="w-full rounded-xl bg-gradient-to-r from-blue-900 to-indigo-600 px-6 py-3.5 font-semibold text-white shadow-lg shadow-blue-900/30 ring-1 ring-white/20 transition hover:from-blue-800 hover:to-indigo-500 sm:w-auto"
             >
               Open in email
             </button>

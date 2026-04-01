@@ -48,7 +48,7 @@ export function ExpandableCard({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-10 h-full w-full bg-white/50 backdrop-blur-md dark:bg-black/50" />
+            className="fixed inset-0 z-10 h-full w-full bg-white/35 backdrop-blur-xl dark:bg-slate-950/55" />
         )}
       </AnimatePresence>
       <AnimatePresence>
@@ -61,18 +61,18 @@ export function ExpandableCard({
               layoutId={`card-${title}-${id}`}
               ref={cardRef}
               className={cn(
-                "relative flex h-full w-full max-w-[850px] flex-col overflow-auto bg-zinc-50 shadow-sm [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] sm:rounded-t-3xl dark:bg-zinc-950 dark:shadow-none",
+                "glass-panel relative flex h-full w-full max-w-[850px] flex-col overflow-auto [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch] [scrollbar-width:none] max-sm:rounded-none max-sm:border-x-0 max-sm:border-b-0 sm:rounded-t-3xl",
                 classNameExpanded
               )}
               {...props}>
               <motion.div layoutId={`image-${title}-${id}`}>
                 <div
-                  className="relative before:absolute before:inset-x-0 before:bottom-[-1px] before:z-50 before:h-[70px] before:bg-gradient-to-t before:from-zinc-50 dark:before:from-zinc-950">
+                  className="relative before:absolute before:inset-x-0 before:bottom-[-1px] before:z-50 before:h-[70px] before:bg-gradient-to-t before:from-[var(--glass-bg-strong)] dark:before:from-[var(--glass-bg-strong)]">
                   <img src={src} alt={title} className="h-80 w-full object-cover object-center" />
                 </div>
               </motion.div>
               <div
-                className="relative h-full before:fixed before:inset-x-0 before:bottom-0 before:z-50 before:h-[70px] before:bg-gradient-to-t before:from-zinc-50 dark:before:from-zinc-950">
+                className="relative h-full before:fixed before:inset-x-0 before:bottom-0 before:z-50 before:h-[70px] before:bg-gradient-to-t before:from-[var(--glass-bg-strong)] dark:before:from-[var(--glass-bg-strong)]">
                 <div className="flex h-auto items-start justify-between p-8">
                   <div>
                     <motion.p
@@ -89,7 +89,7 @@ export function ExpandableCard({
                   <motion.button
                     aria-label="Close card"
                     layoutId={`button-${title}-${id}`}
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-gray-200/90 bg-zinc-50 text-neutral-700 transition-colors duration-300 hover:border-gray-300/90 hover:bg-neutral-50 hover:text-black focus:outline-none dark:border-zinc-900 dark:bg-zinc-950 dark:text-white/70 dark:hover:border-zinc-800 dark:hover:bg-neutral-950 dark:hover:text-white"
+                    className="glass-panel flex h-10 w-10 shrink-0 items-center justify-center rounded-full p-0 text-neutral-700 shadow-md transition hover:ring-2 hover:ring-blue-400/20 focus:outline-none dark:text-white/80"
                     onClick={() => setActive(false)}>
                     <motion.div animate={{ rotate: active ? 45 : 0 }} transition={{ duration: 0.4 }}>
                       <svg
@@ -130,7 +130,7 @@ export function ExpandableCard({
         layoutId={`card-${title}-${id}`}
         onClick={() => setActive(true)}
         className={cn(
-          "flex cursor-pointer flex-col items-center justify-between rounded-2xl border border-gray-200/70 bg-zinc-50 p-3 shadow-sm dark:border-zinc-900 dark:bg-zinc-950 dark:shadow-none",
+          "glass-panel flex h-full cursor-pointer flex-col items-center justify-between rounded-2xl p-3 transition hover:ring-2 hover:ring-blue-400/15",
           className
         )}>
         <div className="flex flex-col gap-4">
@@ -157,7 +157,7 @@ export function ExpandableCard({
               aria-label="Open card"
               layoutId={`button-${title}-${id}`}
               className={cn(
-                "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gray-200/90 bg-zinc-50 text-neutral-700 transition-colors duration-300 hover:border-gray-300/90 hover:bg-neutral-50 hover:text-black focus:outline-none dark:border-zinc-900 dark:bg-zinc-950 dark:text-white/70 dark:hover:border-zinc-800 dark:hover:bg-neutral-950 dark:hover:text-white",
+                "glass-panel flex h-8 w-8 shrink-0 items-center justify-center rounded-full p-0 text-neutral-700 shadow-md transition hover:ring-2 hover:ring-blue-400/20 focus:outline-none dark:text-white/80",
                 className
               )}>
               <motion.div animate={{ rotate: active ? 45 : 0 }} transition={{ duration: 0.4 }}>

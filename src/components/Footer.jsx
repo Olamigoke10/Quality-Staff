@@ -11,7 +11,8 @@ const Footer = () => {
         aria-hidden="true"
       />
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-between">
+        <div className="glass-footer-inner p-8 sm:p-10">
+          <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-md text-center md:text-left">
             <div className="flex flex-col items-center gap-3 md:items-start">
               <img src={QSCWhiteBG} className="h-16 w-auto opacity-95" alt="" />
@@ -52,7 +53,7 @@ const Footer = () => {
               ].map(({ to, label }) => (
                 <li key={to}>
                   <Link
-                    className="rounded-lg px-3 py-2 text-slate-400 transition hover:bg-white/5 hover:text-white"
+                    className="rounded-lg border border-transparent px-3 py-2 text-slate-400 transition hover:border-white/10 hover:bg-white/10 hover:text-white"
                     to={to}
                   >
                     {label}
@@ -61,11 +62,12 @@ const Footer = () => {
               ))}
             </ul>
           </nav>
-        </div>
+          </div>
 
-        <p className="mt-12 border-t border-slate-800/90 pt-8 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} {SITE_NAME}. Serving care providers and professionals in Wales.
-        </p>
+          <p className="mt-10 border-t border-white/10 pt-8 text-center text-xs text-slate-500">
+            © {new Date().getFullYear()} {SITE_NAME}. Serving care providers and professionals in Wales.
+          </p>
+        </div>
       </div>
     </footer>
   )

@@ -84,7 +84,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-100 px-4 py-10 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 sm:px-6 lg:py-14">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 px-4 py-10 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 sm:px-6 lg:py-14">
       <Helmet>
         <title>Blog — {SITE_NAME}</title>
         <meta
@@ -93,7 +93,11 @@ const Blog = () => {
         />
       </Helmet>
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_45%_at_50%_-10%,rgb(59_130_246_/_0.08),transparent)] dark:bg-[radial-gradient(ellipse_80%_45%_at_50%_-10%,rgb(37_99_235_/_0.12),transparent)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_45%_at_50%_-10%,rgb(59_130_246_/_0.16),transparent)] dark:bg-[radial-gradient(ellipse_80%_45%_at_50%_-10%,rgb(37_99_235_/_0.2),transparent)]"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute right-0 top-1/3 h-80 w-80 rounded-full bg-violet-400/10 blur-3xl dark:bg-violet-600/10"
         aria-hidden="true"
       />
       <div className="relative mx-auto max-w-7xl">
@@ -142,7 +146,7 @@ const Blog = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <div className="mx-auto max-w-2xl rounded-2xl border border-slate-200/90 bg-white/90 p-8 shadow-xl shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm dark:border-slate-700/90 dark:bg-slate-900/80 dark:ring-white/10">
+          <div className="glass-panel mx-auto max-w-2xl max-sm:bg-[var(--glass-bg-strong)] p-8">
             <h3 className="text-xl font-semibold text-slate-900 dark:text-white">Need cover or a new role?</h3>
             <p className="mt-3 text-slate-600 dark:text-slate-300">
               <Link

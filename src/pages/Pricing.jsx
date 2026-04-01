@@ -35,9 +35,13 @@ const Pricing = () => {
           content={`Flexible healthcare staffing packages from ${SITE_NAME}. Ad hoc cover, block bookings, and project support across Wales.`}
         />
       </Helmet>
-      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
         <div
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-15%,rgb(59_130_246_/_0.1),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-15%,rgb(37_99_235_/_0.15),transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-15%,rgb(59_130_246_/_0.16),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-15%,rgb(37_99_235_/_0.2),transparent)]"
+          aria-hidden="true"
+        />
+        <div
+          className="pointer-events-none absolute bottom-20 left-10 h-64 w-64 rounded-full bg-indigo-400/12 blur-3xl dark:bg-indigo-600/10"
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -58,14 +62,14 @@ const Pricing = () => {
             {tiers.map((tier) => (
               <div
                 key={tier.name}
-                className={`relative flex flex-col rounded-2xl border p-8 transition ${
+                className={`relative flex flex-col p-8 transition ${
                   tier.featured
-                    ? 'border-blue-500/80 bg-white shadow-xl shadow-blue-900/10 ring-2 ring-blue-500/30 dark:border-blue-500/50 dark:bg-slate-900/90 dark:shadow-blue-950/40 dark:ring-blue-400/20'
-                    : 'border-slate-200/90 bg-white/90 shadow-md shadow-slate-900/5 ring-1 ring-slate-900/5 backdrop-blur-sm hover:border-slate-300 dark:border-slate-700/90 dark:bg-slate-900/70 dark:ring-white/5 dark:hover:border-slate-600'
+                    ? 'glass-panel max-sm:bg-[var(--glass-bg-strong)] ring-2 ring-blue-400/35 shadow-xl shadow-blue-900/15 dark:shadow-blue-950/50 dark:ring-blue-400/30'
+                    : 'glass-panel max-sm:bg-[var(--glass-bg-strong)] hover:ring-1 hover:ring-slate-300/50 dark:hover:ring-slate-500/30'
                 }`}
               >
                 {tier.featured && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-900 to-indigo-600 px-4 py-1 text-xs font-semibold text-white shadow-md">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-900 to-indigo-600 px-4 py-1 text-xs font-semibold text-white shadow-lg shadow-blue-900/35 ring-1 ring-white/25">
                     Popular
                   </span>
                 )}
@@ -85,8 +89,8 @@ const Pricing = () => {
                   to="/contact"
                   className={`mt-8 block w-full rounded-xl py-3.5 text-center text-sm font-semibold transition ${
                     tier.featured
-                      ? 'bg-gradient-to-r from-blue-900 to-indigo-600 text-white shadow-lg shadow-blue-900/20 hover:from-blue-800 hover:to-indigo-500'
-                      : 'border-2 border-slate-200 text-slate-900 hover:border-blue-200 hover:bg-slate-50 dark:border-slate-600 dark:text-white dark:hover:border-blue-500/40 dark:hover:bg-slate-800'
+                      ? 'bg-gradient-to-r from-blue-900 to-indigo-600 text-white shadow-lg shadow-blue-900/30 ring-1 ring-white/20 hover:from-blue-800 hover:to-indigo-500'
+                      : 'border border-slate-200/80 bg-white/40 text-slate-900 shadow-sm backdrop-blur-md hover:border-blue-300/60 hover:bg-white/60 dark:border-slate-600/80 dark:bg-slate-800/40 dark:text-white dark:hover:border-blue-500/40 dark:hover:bg-slate-800/60'
                   }`}
                 >
                   {tier.cta}
